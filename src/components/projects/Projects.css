@@ -1,0 +1,8 @@
+.project__container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: clamp(80vw, 50rem, 90%);
+}

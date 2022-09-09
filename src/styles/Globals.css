@@ -1,0 +1,113 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+
+:root {
+  --header-height: 4.8rem;
+
+  /*========== Colors ==========*/
+
+  /* text */
+
+  --first-color: rgb(19, 216, 223);
+  --first-color-light: rgba(19, 216, 223, 0.1);
+
+  --first-color-alt: rgb(0, 255, 200);
+  --first-color-alt-light: rgba(0, 255, 200, 0.2);
+
+  --second-color: rgb(3, 0, 57);
+  --second-color-light: rgba(3, 0, 57, 0.5);
+
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(180, 207, 209);
+
+  --text-gradient-color: linear-gradient(
+    120deg,
+    rgb(19, 216, 223),
+    rgb(58, 206, 161) 50%,
+    rgb(11, 245, 214) 70%
+  );
+
+  /* background  */
+  --background-color-light: rgba(0, 20, 63, 0.7);
+  --container-color: rgb(0, 10, 31);
+
+  --scroll-bar-color: rgb(1, 13, 31);
+  --scroll-thumb-color: rgb(19, 216, 223);
+  --scroll-thumb-color-hover: rgb(11, 245, 214);
+
+  --body-color: linear-gradient(90deg, rgb(2 31 94) 10%, rgb(1 5 57) 79%);
+
+  /* --body-color: linear-gradient(90deg, rgb(0, 14, 44) 10%, rgb(4, 22, 59) 79%); */
+
+  --background-color-1: linear-gradient(
+    35deg,
+    rgb(12 0 100),
+    rgb(5 0 31) 100%,
+    rgb(1, 25, 78)
+  );
+
+  --background-color-2: linear-gradient(
+    1deg,
+    rgb(4, 20, 49) 0%,
+    rgb(4, 22, 50) 30%
+  );
+
+  /*========== Box Shadows  ==========*/
+
+  --box-shadow-1: rgb(0 0 0 / 70%) 0px 5px 10px 0px;
+  --box-shadow-2: rgb(0 0 0 / 40%) 0px 2px 4px,
+    rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  --biggest-font-size: 4.5rem;
+  --big-font-size: 3.2rem;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.4rem;
+  --smaller-font-size: 1.3rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 5.8rem;
+    --big-font-size: 4.8rem;
+    --h1-font-size: 3.6rem;
+    --h2-font-size: 2.4rem;
+    --h3-font-size: 2rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.3rem;
+  }
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-thumb-color-hover);
+}

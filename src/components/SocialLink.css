@@ -1,0 +1,9 @@
+.social-icon {
+  font-size: 2.5rem;
+  color: var(--first-color);
+  transition: 0.2s;
+}
+.social-icon:hover {
+  color: var(--first-color-alt);
+  transform: scale(1.2);
+}

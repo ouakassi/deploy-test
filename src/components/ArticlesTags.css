@@ -1,0 +1,24 @@
+.filter__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: clamp(29rem, 80%, 100rem);
+}
+
+.filter__container .show-more__button {
+  margin: 2rem 2rem 2rem 0;
+  width: min(12rem, 50%);
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: var(--first-color-alt);
+  font-size: 4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: scale(1.3);
+}
