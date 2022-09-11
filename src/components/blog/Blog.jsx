@@ -9,7 +9,7 @@ import { useFetch } from "../../hooks/useFetch";
 import checkColor from "../../components/projects/checkColor";
 
 const Blog = () => {
-  const [url, setUrl] = useState("/articles/");
+  const [url, setUrl] = useState(process.env.REACT_APP_API_URL + "/articles/");
 
   const { data: articles, isPending, error } = useFetch(url);
 

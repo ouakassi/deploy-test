@@ -6,7 +6,7 @@ import checkColor from "../../components/projects/checkColor.js";
 import SectionTitle from "../../components/Section";
 
 const Projects = () => {
-  const [url, setUrl] = useState("/projects/");
+  const [url, setUrl] = useState(process.env.REACT_APP_API_URL + "/projects/");
 
   const { data: projects, isPending, error } = useFetch(url);
 
@@ -47,7 +47,7 @@ const Projects = () => {
                     return checkColor(tag, i, "project__language");
                   })}
                   website={website}
-                  link={url + slug}
+                  link={"/projects/" + slug}
                 />
               );
             }

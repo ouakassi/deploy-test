@@ -12,7 +12,7 @@ import { useFetch } from "../../hooks/useFetch";
 const Projects = () => {
   const [projectTotal, setProjectTotal] = useState(3);
 
-  const [url, setUrl] = useState("/projects/");
+  const [url, setUrl] = useState(process.env.REACT_APP_API_URL + "/projects/");
 
   const { data: projects, isPending, error } = useFetch(url);
 

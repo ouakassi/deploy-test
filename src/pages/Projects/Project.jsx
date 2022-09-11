@@ -15,7 +15,7 @@ export default function Article() {
   let navigate = useNavigate();
   let location = useLocation();
 
-  const url = `/projects/${slug}`;
+  const url = process.env.REACT_APP_API_URL + "/projects/" + slug;
 
   const { data: project, isPending, error } = useFetch(url);
 

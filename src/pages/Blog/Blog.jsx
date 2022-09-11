@@ -10,13 +10,13 @@ import BlogCardSkeleton from "../../components/blog/BlogCardSkeleton";
 import { ShowMoreButton } from "../../components/Buttons/ShowMoreButton";
 
 const Blog = () => {
-  const [url, setUrl] = useState("/articles/");
+  const [url, setUrl] = useState(process.env.REACT_APP_API_URL + "/articles/");
   const [filterTags, setFilterTags] = useState([]);
 
   const { data: articles, isPending, error } = useFetch(url);
 
   const queryArticles = async (query) => {
-    setUrl(`/articles/?${query}`);
+    setUrl(`${process.env.REACT_APP_API_URL}/articles/?${query}`);
   };
 
   return (

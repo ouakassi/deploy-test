@@ -10,7 +10,7 @@ export default function Article() {
   let navigate = useNavigate();
   let location = useLocation();
 
-  const url = `/articles/${slug}`;
+  const url = process.env.REACT_APP_API_URL + "/articles/" + slug;
 
   const { data: article, isPending, error } = useFetch(url);
 

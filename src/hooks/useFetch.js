@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = () => {
+export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ export const useFetch = () => {
       setIsPending(true);
 
       try {
-        const res = await fetch("http://localhost:5000/api/projects", {
+        const res = await fetch(url, {
           signal: controller.signal,
         });
         if (!res.ok) {
@@ -39,7 +39,7 @@ export const useFetch = () => {
     return () => {
       controller.abort();
     };
-  }, []);
+  }, [url]);
 
   return { data, isPending, error };
 };
